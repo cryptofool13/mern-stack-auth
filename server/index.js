@@ -10,7 +10,10 @@ const router = require("./router");
 const app = express();
 
 // db setup
-mongoose.connect("mongodb://localhost:27017/auth");
+mongoose.connect(
+  "mongodb://localhost:27017/auth",
+  { useNewUrlParser: true }
+);
 
 // app setup
 

@@ -6,29 +6,31 @@ import "./HeaderStyle.css";
 
 class Header extends Component {
   renderLinks() {
+    // const
     if (this.props.authenticated) {
       return (
-        <div>
-          <Link to="/feature">Feature</Link>
-          <Link to="/signout">Sign Out</Link>
+        <div className="ui _header">
+          <Link to="/home">Budget App</Link>
+          <div>
+            <Link to="/home">Home</Link>
+            <Link to="/signout">Sign Out</Link>
+          </div>
         </div>
       );
     } else {
       return (
-        <div>
-          <Link to="/signup">Sign up</Link>
-          <Link to="/signin">Sign In</Link>
+        <div className="ui _header">
+          <Link to="/">Budget App</Link>
+          <div>
+            <Link to="/signup">Sign up</Link>
+            <Link to="/signin">Sign In</Link>
+          </div>
         </div>
       );
     }
   }
   render() {
-    return (
-      <div className="header">
-        <Link to="/">Redux Auth</Link>
-        {this.renderLinks()}
-      </div>
-    );
+    return <div>{this.renderLinks()}</div>;
   }
 }
 

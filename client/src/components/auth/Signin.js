@@ -8,7 +8,7 @@ import * as actions from "../../actions";
 class Signin extends Component {
   onSubmit = formProps => {
     this.props.signin(formProps, () => {
-      this.props.history.push("/feature");
+      this.props.history.push("/home");
     });
   };
   render() {
@@ -17,13 +17,19 @@ class Signin extends Component {
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
           <label>Email</label>
-          <Field name="email" autoComplete="" type="text" component="input" />
+          <Field
+            name="email"
+            autoComplete=""
+            focus
+            type="text"
+            component="input"
+          />
         </fieldset>
         <fieldset>
           <label>Password</label>
           <Field
             name="password"
-            autoComplete="none"
+            autocomplete="none"
             type="password"
             component="input"
           />

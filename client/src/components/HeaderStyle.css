@@ -1,7 +1,7 @@
-.header {
+._header {
   display: flex;
   justify-content: space-between;
 }
-.header a {
+._header a {
   margin: 0 10px;
 }
